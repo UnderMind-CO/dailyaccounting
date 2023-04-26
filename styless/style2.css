@@ -1,0 +1,14 @@
+.avion{
+    position: fixed;
+    transform: translate3d(-50%, -50%);
+    width: 40px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: all .15s;
+
+}
+
+.avion svg{
+    width: 100%;
+    height: 100%;
+}
