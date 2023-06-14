@@ -1,6 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+.error{
+  background-color: rgba(248, 32, 32, 0.856);
+  text-align: center;
+  color: white;
+  size: 25px;
+  border-radius: 7px;
+  box-shadow: 5px 5px rgba(0,0,0,0.1);
+}
+
+.registrado{
+  background-color: rgba(2, 216, 152, 0.877);
+  text-align: center;
+  color: white;
+  size: 25px;
+  border-radius: 7px;
+  box-shadow: 5px 5px rgba(0,0,0,0.1);
+}
+
+.field .fas fa-user .fas fa-lock {
+  
+  display: grid;
+
+
+
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -76,6 +102,7 @@ html,body{
     color: rgba(61, 138, 167, 0.56);
     font-size: 30px;
     font-family: 'Cookie', cursive;
+    cursor: pointer;
 }
 
 
@@ -95,10 +122,10 @@ html,body{
    }
 
 .title-text span{
-  color: #29539b;
+  color: #0099ff;
 }
 .title-text h3{
-  color: #29539b;
+  color: #0099ff;
 }
 
 .footer-left h3 {
@@ -107,14 +134,14 @@ html,body{
 
 .wrapper{
   overflow: hidden;
-  max-width: 390px;
-  background: #fff;
-  padding: 30px;
+  max-width: 400px;
+
+  padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  box-shadow: 8px 15px 20px 8px rgba(0,0,0,0.1);
   align-content: center;
 
-  margin-top: 65px;
+  margin-top: 75px;
 }
 .wrapper .title-text{
   display: flex;
@@ -133,7 +160,7 @@ html,body{
   height: 50px;
   width: 100%;
   overflow: hidden;
-  margin: 30px 0 10px 0;
+  margin: 10px 0 25px 0;
   justify-content: space-between;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -145,7 +172,7 @@ html,body{
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  line-height: 48px;
+  line-height: 50px;
   cursor: pointer;
   z-index: 1;
   transition: all 0.6s ease;
@@ -224,11 +251,16 @@ form .field input:focus::placeholder{
   color: #b3b3b3;
 }
 .form-inner form .pass-link{
-  margin-top: 5px;
+  margin-top: 6px;
 }
+.pass-link:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
 .form-inner form .signup-link{
   text-align: center;
-  margin-top: 30px;
+  margin-top: 33px;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a{
@@ -273,6 +305,13 @@ form .btn input[type="submit"]{
   cursor: pointer;
 }
 
+.main {
+  padding: 50px;
+  margin: 50px;
+  border-radius: 8px;
+  box-shadow: 7px;
+}
+
 
 /* FOOTER SECTION, AÚN ME FALTA HACERLE ALGUNAS COSAS IGUAL QUE AL DEL HOME */
 
@@ -287,7 +326,7 @@ footer{
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
+  font: 16px sans-serif;
   
   padding: 28px 25px;
   margin-top: 80px;
@@ -304,9 +343,9 @@ footer{
   width: 40%;
  }
   
- .footer-distributed h3{
+ .footer-left h3{
   color:  #ffffff;
-  font: normal 36px 'Cookie', cursive;
+  font: normal 32px 'Cookie', cursive;
   margin: 0;
  }
 
@@ -316,6 +355,7 @@ footer{
   
  .footer-distributed h3 span{
   color:  #5383d3;
+  font: normal 32px 'Cookie', cursive;
  }
   
   
@@ -358,8 +398,9 @@ footer{
  }
   
  .footer-distributed .footer-center i.fa-envelope{
-  font-size: 17px;
+  font-size: 15px;
   line-height: 38px;
+  background-color:  #6ebae9;
  }
   
  .footer-distributed .footer-center p{
@@ -372,7 +413,7 @@ footer{
  .footer-distributed .footer-center p span{
   display:block;
   font-weight: normal;
-  font-size:14px;
+  font-size:12px;
   line-height:2;
  }
   
@@ -387,7 +428,7 @@ footer{
   
  .footer-distributed .footer-daily-about{
   line-height: 22px;
-  color:  #92999f;
+  color:  #ffffff;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
@@ -406,18 +447,18 @@ footer{
  }
   
  .footer-distributed .footer-icons{
-  margin-top: 20px;
+  margin-top: 25px;
  }
   
  .footer-distributed .footer-icons a{
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  background-color:  #33383b;
-  border-radius: 2px;
+  background-color:  #6ebae9;
+  border-radius: 5px;
   
-  font-size: 20px;
+  font-size: 10px;
   color: #ffffff;
   text-align: center;
   line-height: 32px;
@@ -427,8 +468,14 @@ footer{
  }
 
  .footer-center .fa fa-map-marker .fa fa-phone .fa fa-envelope i{
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
+  background-color:  #6ebae9;
+  
+ }
+
+ .fa-envelope .fa fa-phone .fa fa-map-marker i{
+  background-color: #6ebae9;
  }
   
   

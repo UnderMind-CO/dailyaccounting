@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-     <script type="text/javascript" src="./styless/funciones.js"></script>
+    <link rel="connect" href="../public/datb_conct.php">
+   
     
     <title>Login & register |Daily Accounting</title>
     
@@ -22,7 +23,7 @@
 
 <div id="navbar-right">
     <a href="#" id="len2">Save</a>
-    <a href="/p/about.html" id="len3">About us</a>
+    <a href="./about.html" id="len3">About us</a>
 </div></div>
 
 <div class="wrapper">
@@ -42,32 +43,35 @@
           <label for="signup" class="slide signup">Signup</label>
           <div class="slider-tab"></div>
        </div>
-       <div class="form-inner">
-          <form action="#" class="login">
-             <div class="field">
-                <input type="text" placeholder="Email Address" required>
-             </div>
-             <div class="field">
-                <input type="password" placeholder="Password" required>
-             </div>
-             <div class="pass-link">
-                <a href="#">Forgot password?</a>
-             </div>
-             <div class="field btn">
-                <div class="btn-layer"></div>
-                <input type="submit" value="Login">
-             </div>
+       <form action="../public/validacion.php" method="post" class="login">
+          
+         <div class="field">
+            <input type="text" placeholder="Email Address" required>
+         </div>
+         <div class="field">
+            <input type="password" placeholder="Password" required>
+         </div>
+         <div class="pass-link">
+            <a href="#">Forgot password?</a>
+         </div>
+         <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login">
+         </div>
              <div class="signup-link">
                 Not a member? <a href="#register">Signup now</a>
              </div>
           </form>
-          <form action="#" class="signup">
+          <form action="../public/" method="posts" class="signup">
             <div class="field">
                 <input type="text" placeholder="Full Name" required>
              </div>
              <div class="field">
                 <input type="text" placeholder="Email Address" required>
              </div>
+             <div class="field">
+               <input type="date" placeholder="date of birth" required>
+            </div>
              <div class="field">
                 <input type="password" placeholder="Password" required>
              </div>
@@ -88,16 +92,18 @@
  
    <div class="footer-left">
    
-   <a href="../index.html" aria-errormessage="Don't receive any information." ><h3>Daily<span>Accounting</span></h3></a>
+   <a href="../index.html" aria-errormessage="Don't receive any information." >
+      <h3>Daily<span>Accounting</span></h3>
+   </a>
    
    <p class="footer-links">
    <a href="#">Home</a>
    ·
    <a href="">Save</a>
    ·
-   <a href="./about.html">About</a>
+   <a href="./p/about.html">About</a>
    ·
-   <a href="./login.html#register">Register</a>
+   <a href="./p/login.html#signup">Register</a>
    ·
    <a href="#">Login</a>
    ·
@@ -170,6 +176,8 @@
       return false;
     });
  </script>
+
+
 
 </body>
 
