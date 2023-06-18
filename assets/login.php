@@ -2,6 +2,20 @@
 
 
 
+
+
+session_start();
+
+if(isset($_SESSION['usuario'])){
+
+    echo '<script>alert ("Parece que ya tienes una sesión abierta ;) \n Estas Siendo Redirigido...");
+          window.location = "../home.php";
+          </script>';
+
+    exit();
+    
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -54,11 +68,11 @@
           <div class="slider-tab"></div>
        </div>
        <div class="form-inner">
-          <form action="../public/validacion.php" method="post" class="login">
+          <form action="../public/validacion_login.php" method="post" class="login">
           
          
             <div class="field">
-                <input type="text" name="email" placeholder="Enter Your Email" required>
+                <input type="email" name="email" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control col-md-3" required>
              </div>
              <div class="field">	
 

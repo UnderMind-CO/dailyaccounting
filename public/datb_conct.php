@@ -4,6 +4,8 @@ $database = "registros";
 $username = "root";
 $password = "";
 
+
+
 // Message
 
 $mensage = "an unexpected error occurred during connection, Please try again";

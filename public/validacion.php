@@ -1,35 +1,5 @@
 <?php
  
-// VERIFICACIÓN DATOS INICIO DE SESIÓN
-
-session_start();
-include('./datb_conct.php');
-
-$usuario_log =$_POST['email'];
-$contraseña_log =$_POST['contraseña'];
-
-if (isset($_POST['login'])){
-$consulta_log = "SELECT * FROM datos WHERE usuario ='$usuario_log' AND contraseña = '$contraseña_log' ";
-$result_log = mysqli_query($conn,$consulta_log);
-
-$revisar = mysqli_num_rows($result_log);
-
-if ($revisar=true){
-    header('location:../home.php');
-}else{
-    include ('../assets/login.php');
-    ?>
-    <h2>Error de Validación, Por favor Compruebe los datos</h2>
-    <?php
-    
-
-
-}
-mysqli_free_result($result_log);
-mysqli_close($conn);
-
-}
-
 
 // VERIFICACIÓN DE DATOS REGISTRO
 
@@ -43,7 +13,7 @@ if (isset($_POST['signup'])) {
     $usuario_reg = trim($_POST['usuario_reg']);
 
     $contraseña_reg = trim($_POST['contraseña_reg']);
-    $cifrar_contra= password_hash($contraseña_reg, PASSWORD_BCRYPT);
+    $cifrar_contra= hash('MD5', $contraseña_reg);
     password_verify($contraseña_reg, $cifrar_contra);
 
 
@@ -64,7 +34,7 @@ if (isset($_POST['signup'])) {
     $result_reg = mysqli_query($conn,$consulta_reg);
     
     if($result_reg){
-        
+
         ?>
         <h3 class="registrado">¡Registro Exitoso!, Estas sigendo redirigido...</h3>
         <meta http-equiv="Refresh" content="2;url=../assets/login.php">

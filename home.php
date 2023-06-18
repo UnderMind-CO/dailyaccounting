@@ -1,4 +1,21 @@
+<?php
 
+
+
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+
+    echo '<script>alert ("Para Acceder A Esta Página, Requieres Iniciar Sesión \n Estas Siendo Redirigido...");
+          window.location = "./assets/login.php";
+          </script>';
+
+    session_destroy();
+    die();
+    
+}
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -26,9 +43,9 @@
 
     <div id="navbar">
 
-        <a href="index.html" id="logo">Daily<span>Accounting</span></a>
-        <a href="p/contact.html">Contact</a>
-        <a href="p/about.html">About Us</a>
+        <a href="./index.html" id="logo">Daily<span>Accounting</span></a>
+        <a href="./assets/contact.html">Contact</a>
+        <a href="./assets/about.html">About Us</a>
 
 
 
