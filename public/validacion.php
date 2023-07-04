@@ -48,12 +48,12 @@ if (isset($_POST['signup'])) {
     }
     }else{
         ?>
-        <h3 class="error">¡Eror de Autentificación!, Por Favor Compruebe Los Datos...</h3>
+        <h3 class="error">¡Error de Autentificación!, Por Favor Compruebe Los Datos...</h3>
         <meta http-equiv="Refresh" content="2;url=../assets/login.php">
         <?php
 
     }
-}
+}mysqli_close($conn);
 
     
 

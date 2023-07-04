@@ -22,6 +22,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error($mesage));
     
 }
-echo "Connected successfully";
+/* echo "Connected successfully"; */
 
 ?>

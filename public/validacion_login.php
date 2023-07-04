@@ -2,8 +2,10 @@
 
 // VERIFICACIÓN DATOS INICIO DE SESIÓN
 
-session_start();
+
 include('./datb_conct.php');
+
+if (isset($_POST['login'])) {
 
 $email =$_POST['email'];
 $contraseña =$_POST['contraseña'];
@@ -14,11 +16,12 @@ $contraseña = hash('MD5', $contraseña);
 
 $result_log = mysqli_query($conn,"SELECT * FROM datos WHERE email ='$email' AND contraseña = '$contraseña' ");
 
-
+$row = $result_log->fetch_assoc();
 
 if (mysqli_num_rows($result_log) > 0){
-
+    session_start();
     $_SESSION['usuario'] = $email;
+    $_SESSION['rol'] = $row['rol'];
     header('location:../home.php');
     exit();
 }else{
@@ -32,7 +35,7 @@ if (mysqli_num_rows($result_log) > 0){
     
 
 
-}
+}}
 
 mysqli_close($conn);
 
